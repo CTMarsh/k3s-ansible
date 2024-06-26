@@ -108,7 +108,7 @@ metal_lb_ip_range: "10.0.80.150-10.0.80.159"
 # Mixing and matching VMs and lxc containers is not supported, ymmv if you want to do this.
 # I would only really recommend using this if you have particularly low powered proxmox nodes where the overhead of
 # VMs would use a significant portion of your available resources.
-proxmox_lxc_configure: false
+proxmox_lxc_configure: true
 # the user that you would use to ssh into the host, for example if you run ssh some-user@my-proxmox-host,
 # set this value to some-user
 proxmox_lxc_ssh_user: root
@@ -119,6 +119,8 @@ proxmox_lxc_ct_ids:
   - 202
   - 203
   - 204
+  - 205
+  - 206
 
 # Only enable this if you have set up your own container registry to act as a mirror / pull-through cache
 # (harbor / nexus / docker's official registry / etc).
